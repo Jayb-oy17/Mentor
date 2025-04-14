@@ -1,0 +1,90 @@
+@media (max-width: 1200px) {
+  .navLinkBox {
+    display: none;
+  }
+  
+  .navToggle {
+    display: block !important;
+  }
+
+  .stick .navLinkBox {
+    position: absolute;
+    top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    right: 1rem;
+    width: 30rem;
+    height: 40vh;
+    border-radius: 1rem;
+    z-index: 999;
+    background-color: var(--surface-color);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .stick .navLink {
+    font-size: 25px;
+  }
+
+  .stick .open {
+    display: none;
+  }
+
+  .stick .close {
+    display: block;
+  }
+  .close {
+    display: none;
+  }
+  .open,
+  .close {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .padd-1 {
+    padding: 3rem 5rem;
+  }
+
+  .ab{
+    grid-template-columns: 1fr;
+  }
+
+  .counterBox,
+  .whyChooseUs,
+  .clients,
+  .footerListBox,
+  .coursesListBox,
+  .founder,
+  .trainerList,
+  .priceListBox{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .clientsBox{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px){
+  .clientsBox{
+    grid-template-columns: 1fr 1fr;
+  }
+  .whyChooseUs,
+  .footerListBox,
+  .coursesListBox,
+  .founder,
+  .trainerList,
+  .priceListBox{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:400px){
+  .padd-1{
+    padding: 2rem;
+  }
+}
