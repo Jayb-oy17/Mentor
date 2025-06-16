@@ -35,7 +35,7 @@ a {
 }
 
 .padd-1 {
-  padding: 3rem 10rem;
+  padding: 2rem 5rem;
 }
 
 .hide {
@@ -468,7 +468,7 @@ a {
   font-size: 4rem;
 }
 
-swiper-container {
+events {
   width: 100%;
   height: 50vh;
   margin-top: 8rem;
@@ -673,14 +673,15 @@ swiper-slide {
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-top: 3rem;
+  height: 90vh;
 }
 
 .event {
-  position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100%;
   transition: 0.3s;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
 }
 
 .eventImg {
@@ -693,12 +694,9 @@ swiper-slide {
 }
 
 .eventInfo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
   background-color: var(--bg2-color);
-  width: 90%;
+  width: 100%;
+  height: max-content;
   border-top: 5px solid transparent;
   text-align: center;
   padding: 2rem;
@@ -725,7 +723,7 @@ swiper-slide {
   border-top: 5px solid var(--accent-color);
 }
 
-.event:hover .eventTitle{
+.event:hover .eventTitle {
   color: var(--accent-color);
 }
 
@@ -733,13 +731,13 @@ swiper-slide {
 
 /* PRICING SECTION */
 
-.priceListBox{
+.priceListBox {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
 }
 
-.priceLIst{
+.priceLIst {
   text-align: center;
   background-color: var(--surface-color);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -747,53 +745,53 @@ swiper-slide {
   overflow: hidden;
 }
 
-.priceType{
+.priceType {
   background-color: var(--bg2-color);
   padding: 20px;
   font-size: 18px;
   color: var(--heading-color);
 }
 
-.price{
+.price {
   display: flex;
   gap: 5px;
   justify-content: center;
   padding: 15px;
 }
 
-.price .bold{
+.price .bold {
   font-size: 3rem;
   font-weight: 600;
 }
 
-.price span{
+.price span {
   font-size: 16px;
   font-weight: 400;
   color: var(--default-color);
   align-self: baseline;
 }
 
-.priceInfo{
+.priceInfo {
   margin-bottom: 15px;
 }
 
-.priceInfo li{
+.priceInfo li {
   margin-bottom: 3rem;
   font-size: 15px;
   color: var(--default-color);
 }
 
-.lined{
+.lined {
   text-decoration: line-through;
   color: var(--bg2-color);
 }
 
-.priceBtn{
+.priceBtn {
   padding: 20px;
   background-color: var(--bg2-color);
 }
 
-.priceBtn button{
+.priceBtn button {
   padding: 1rem 2rem;
   font-size: 16px;
   font-weight: 600;
@@ -804,18 +802,18 @@ swiper-slide {
   outline: none;
 }
 
-.recommended{
+.recommended {
   background-color: var(--accent-color);
   color: var(--surface-color);
 }
 
-.best{
+.best {
   position: relative;
 }
 
-.best::before{
+.best::before {
   position: absolute;
-  content: 'Advanced';
+  content: "Advanced";
   background-color: var(--accent-color);
   width: 15rem;
   display: flex;
@@ -832,12 +830,12 @@ swiper-slide {
 
 /* CONTACT SECTION */
 
-.map{
+.map {
   width: 100%;
   height: 70vh;
 }
 
-.map iframe{
+.map iframe {
   width: 100%;
   height: 100%;
 }
@@ -944,6 +942,16 @@ swiper-slide {
   color: var(--accent-color);
   font-family: var(--nav-font);
   font-weight: 600;
+}
+
+.ftIconBox{
+  display: flex;
+  gap: 5px;
+}
+
+.ftIconBox ion-icon{
+  font-size: 2rem;
+  color: var(--default-color);
 }
 
 /* FOOTER SECTION */

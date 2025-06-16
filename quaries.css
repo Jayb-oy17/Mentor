@@ -13,11 +13,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 3rem;
     right: 1rem;
-    width: 30rem;
-    height: 40vh;
+    width: 25rem;
+    padding: 2rem;
     border-radius: 1rem;
     z-index: 999;
     background-color: var(--surface-color);
@@ -41,6 +41,10 @@
   .open,
   .close {
     font-size: 4rem;
+  }
+
+  .events{
+    height: 60vh;
   }
 }
 
@@ -69,6 +73,24 @@
   }
 }
 
+@media (max-width: 900px){
+  .events{
+    height: 100%;
+    grid-template-columns: 1fr;
+  }
+  .eventInfo{
+    position: none;
+    height: 100%;
+  }
+}
+@media (max-width: 700px){
+  swiper-container{
+    height: 30vh;
+  }
+  swiper-slide{
+    height: 25vh;
+  }
+}
 @media (max-width: 600px){
   .clientsBox{
     grid-template-columns: 1fr 1fr;
@@ -80,6 +102,15 @@
   .trainerList,
   .priceListBox{
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px){
+  swiper-container{
+    height: 45vh;
+  }
+  swiper-slide{
+    height: 38vh;
   }
 }
 

@@ -46,11 +46,9 @@ function animateCounter(counter) {
   let updateCount = () => {
     count += speed;
     if (count < target) {
-      counter.innerText = Math.floor(count) + "+";
+      counter.innerText = Math.floor(count);
       requestAnimationFrame(updateCount);
-    } else {
-      counter.innerText = target + "+";
-    }
+    } 
   };
   updateCount();
 }
@@ -61,7 +59,6 @@ let observer = new IntersectionObserver(
       if (entry.isIntersecting && !isCounting) {
         isCounting = true;
         counters.forEach((counter) => {
-          counter.innerText = "0+";
           animateCounter(counter);
         });
       } else if (!entry.isIntersecting) {
@@ -75,3 +72,18 @@ let observer = new IntersectionObserver(
 counters.forEach((counter) => {
   observer.observe(counter);
 });
+
+// swiper js
+const body = document.querySelector("body");
+const mySwiper = document.querySelector(".mySwiper");
+mySwiper?.setAttribute("slides-per-view", 2);
+
+function reduceSwiperSize() {
+  if (body.clientWidth <= 700) {
+    mySwiper.setAttribute("slides-per-view", 1);
+  } else {
+    mySwiper.setAttribute("slides-per-view", 2);
+  }
+}
+
+window.addEventListener("resize", reduceSwiperSize);
