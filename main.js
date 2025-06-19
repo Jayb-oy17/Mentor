@@ -74,16 +74,21 @@ counters.forEach((counter) => {
 });
 
 // swiper js
-const body = document.querySelector("body");
-const mySwiper = document.querySelector(".mySwiper");
-mySwiper?.setAttribute("slides-per-view", 2);
-
-function reduceSwiperSize() {
-  if (body.clientWidth <= 700) {
-    mySwiper.setAttribute("slides-per-view", 1);
-  } else {
-    mySwiper.setAttribute("slides-per-view", 2);
-  }
-}
-
-window.addEventListener("resize", reduceSwiperSize);
+const swiperEl = document.querySelector("swiper-container");
+Object.assign(swiperEl, {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    clickable: true,
+  },
+  breakpoints: {
+    600: {
+      slidesPerView: 1,
+    },
+    1000: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+  },
+});
+swiperEl.initialize();
